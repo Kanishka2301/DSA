@@ -1,7 +1,7 @@
 import java.util.*;
-class solution{
+class TwoSum{
     public static void main(String[] args){
-        solution s=new solution();
+        TwoSum s=new TwoSum();
         int[] n={2,7,11,15};
         int target=9;
         int[] res=s.twosum(n,target);

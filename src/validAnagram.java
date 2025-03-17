@@ -1,6 +1,6 @@
 //s="anagram" t="nagaram"
 import java.util.*;
- class solution {
+ class validAnagram {
     public boolean isAnagram(String s,String t){
         if(s.length()!=t.length()) return false;
         int[] count=new int[26];
@@ -16,7 +16,7 @@ import java.util.*;
     return true;
     }
     public static void main(String[] args){
-        solution so=new solution();
+        validAnagram so=new validAnagram();
         String s="anagram";
         String t="nagaram";
         System.out.println(so.isAnagram(s,t));
