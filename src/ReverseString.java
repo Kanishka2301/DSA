@@ -1,16 +1,22 @@
-import java.util.Scanner;
-
+import java.util.*;
 public class ReverseString {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string:");
-        String str = sc.nextLine();
-        char ch;
-        String revstr = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            ch = str.charAt(i);
-            revstr += ch;
+        String s = sc.nextLine();
+        System.out.println(revwords(s));
+    }
+    public static String revwords(String s){
+        List<String> words=new ArrayList<>();
+        s=s.trim();
+        String[] ch=s.split("\\s+");
+        for(String word:ch){
+            if(!word.isEmpty()){
+                words.add(word);
+            }
         }
-        System.out.println("Reversed string: " + revstr);
+        Collections.reverse(words);
+        return String.join(" ",words);
     }
 }
+
